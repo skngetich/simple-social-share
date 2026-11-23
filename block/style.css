@@ -1,0 +1,109 @@
+/* Social Share block — front end and editor. */
+
+.sss {
+	--sss-gap: 0.5rem;
+	--sss-icon: 20px;
+	--sss-pad: 0.6rem;
+	--sss-radius: 8px;
+}
+
+.sss--small  { --sss-icon: 16px; --sss-pad: 0.45rem; }
+.sss--large  { --sss-icon: 26px; --sss-pad: 0.8rem; }
+
+.sss--square  { --sss-radius: 0; }
+.sss--circle  { --sss-radius: 999px; }
+
+.sss__heading {
+	margin: 0 0 0.5rem;
+	font-weight: 600;
+}
+
+.sss__list {
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--sss-gap);
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.sss--column .sss__list          { flex-direction: column; align-items: flex-start; }
+.sss--justify-center .sss__list  { justify-content: center; }
+.sss--justify-right .sss__list   { justify-content: flex-end; }
+.sss--justify-center .sss__heading { text-align: center; }
+.sss--justify-right .sss__heading  { text-align: right; }
+
+.sss__list li {
+	margin: 0;
+	padding: 0;
+}
+
+.sss__btn {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.45em;
+	padding: var(--sss-pad);
+	border: 0;
+	border-radius: var(--sss-radius);
+	background: var(--sss-bg, var(--sss-brand));
+	color: var(--sss-fg, #fff);
+	font: inherit;
+	font-size: 0.9em;
+	line-height: 1;
+	text-decoration: none;
+	cursor: pointer;
+	transition: transform 0.15s ease, filter 0.15s ease;
+}
+
+.sss__btn:hover,
+.sss__btn:focus-visible {
+	color: var(--sss-fg, #fff);
+	filter: brightness(1.1);
+	transform: translateY(-1px);
+	text-decoration: none;
+}
+
+.sss__btn:focus-visible {
+	outline: 2px solid currentColor;
+	outline-offset: 2px;
+}
+
+.sss__btn svg {
+	width: var(--sss-icon);
+	height: var(--sss-icon);
+	fill: currentColor;
+	flex-shrink: 0;
+}
+
+/* Instagram's gradient in brand mode. */
+.sss--brand .sss__btn--instagram {
+	background: linear-gradient(45deg, #feda75, #fa7e1e 30%, #d62976 60%, #962fbf 85%, #4f5bd5);
+}
+
+/* Icons only: hide the text but keep it for screen readers. */
+.sss--icons .sss__label {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+	white-space: nowrap;
+}
+
+.sss--icons .sss__label--always {
+	position: static;
+	width: auto;
+	height: auto;
+	overflow: visible;
+	clip: auto;
+}
+
+.sss--labels .sss__btn {
+	padding-inline: calc(var(--sss-pad) * 1.6);
+}
+
+.sss__notice {
+	margin: 0.5rem 0 0;
+	font-size: 0.875em;
+	opacity: 0.8;
+}

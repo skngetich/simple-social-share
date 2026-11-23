@@ -1,0 +1,93 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "simple-social-share/social-share",
+	"version": "1.1.0",
+	"title": "Social Share",
+	"category": "widgets",
+	"icon": "share",
+	"description": "Share buttons readers can click to share this post on LinkedIn, Instagram, Facebook, X, WhatsApp and more.",
+	"keywords": [
+		"share",
+		"social",
+		"linkedin",
+		"instagram",
+		"facebook"
+	],
+	"textdomain": "simple-social-share",
+	"usesContext": [
+		"postId"
+	],
+	"supports": {
+		"html": false,
+		"align": [
+			"left",
+			"center",
+			"right",
+			"wide",
+			"full"
+		],
+		"spacing": {
+			"margin": true,
+			"padding": true
+		}
+	},
+	"attributes": {
+		"useGlobal": {
+			"type": "boolean",
+			"default": true
+		},
+		"heading": {
+			"type": "string",
+			"default": "Share this post"
+		},
+		"networks": {
+			"type": "array",
+			"default": [
+				"linkedin",
+				"instagram",
+				"facebook",
+				"x",
+				"whatsapp",
+				"email",
+				"copy"
+			]
+		},
+		"layout": {
+			"type": "string",
+			"default": "row"
+		},
+		"justify": {
+			"type": "string",
+			"default": "left"
+		},
+		"size": {
+			"type": "string",
+			"default": "medium"
+		},
+		"shape": {
+			"type": "string",
+			"default": "rounded"
+		},
+		"showLabels": {
+			"type": "boolean",
+			"default": false
+		},
+		"colorMode": {
+			"type": "string",
+			"default": "brand"
+		},
+		"customBackground": {
+			"type": "string",
+			"default": "#1e40af"
+		},
+		"customText": {
+			"type": "string",
+			"default": "#ffffff"
+		}
+	},
+	"editorScript": "file:./index.js",
+	"viewScript": "file:./view.js",
+	"style": "file:./style.css",
+	"render": "file:./render.php"
+}
