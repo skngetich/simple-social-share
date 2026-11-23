@@ -2,6 +2,10 @@
 
 A WordPress plugin that adds a **Social Share** block and share buttons readers can click to share your posts on LinkedIn, Instagram, Facebook, X, WhatsApp, Telegram, email, or by copying the link.
 
+![How Simple Social Share works: install, add the block, style it, and readers share](docs/demo.gif)
+
+[Watch the demo as a video (MP4)](docs/demo.mp4)
+
 ## Features
 
 - **Social Share block**: add it anywhere from the block editor (`+` → search "Social Share").
